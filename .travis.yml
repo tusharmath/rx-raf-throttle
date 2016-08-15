@@ -12,9 +12,8 @@ before_install:
 before_script:
   - npm prune
   - npm run lint
-  - npm run coverage
 after_success:
   - npm run semantic-release
 branches:
   except:
-    - "/^v\\d+\\.\\d+\\.\\d+$/"
+    - /^v\d+\.\d+\.\d+$/
