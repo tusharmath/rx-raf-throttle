@@ -16,7 +16,8 @@ npm install rx-raf-throttle --save
 
 ## rxRAFThrottle(source) ⇒ <code>[Observable](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/observable.md)</code>
 Throttles a stream using [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame).
-A value from the source stream is fired only once per requestAnimationFrame.
+A value from the source stream is fired only once per requestAnimationFrame, see
+[demo](https://esnextb.in/?gist=dae749a4d12d3a78a8685404ed7f3740).
 
 **Kind**: global function  
 
@@ -27,7 +28,5 @@ A value from the source stream is fired only once per requestAnimationFrame.
 **Example**  
 ```js
 import {rxRAFThrottle} from 'rx-raf-throttle'
-rxRAFThrottle(
-  Rx.Observable.interval(1)
-).subscribe(x => console.log(x))
+rxRAFThrottle(Rx.Observable.interval(1)).subscribe(x => console.log(x))
 ```

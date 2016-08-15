@@ -9,13 +9,12 @@ import {Observable as O} from 'rx'
 
 /**
  * Throttles a stream using {@link https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame requestAnimationFrame}.
- * A value from the source stream is fired only once per requestAnimationFrame.
+ * A value from the source stream is fired only once per requestAnimationFrame, see
+ * {@link https://esnextb.in/?gist=dae749a4d12d3a78a8685404ed7f3740 demo}.
  * @param {external:Observable} source
  * @example
  * import {rxRAFThrottle} from 'rx-raf-throttle'
- * rxRAFThrottle(
- *   Rx.Observable.interval(1)
- * ).subscribe(x => console.log(x))
+ * rxRAFThrottle(Rx.Observable.interval(1)).subscribe(x => console.log(x))
  * @returns {external:Observable}
  */
 export function rxRAFThrottle (source) {
