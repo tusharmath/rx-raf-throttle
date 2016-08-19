@@ -29,7 +29,7 @@ export function rxRAFThrottle (source) {
     return source.subscribe(
       queueValue,
       err => observer.onError(err),
-      () => observer.onComplete()
+      () => observer.onCompleted()
     )
   })
 }
