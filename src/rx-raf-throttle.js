@@ -23,13 +23,13 @@ export function rxRAFThrottle (source) {
 
     function queueValue (value) {
       if (frame) raf.cancel(frame)
-      frame = raf(() => observer.next(value))
+      frame = raf(() => observer.onNext(value))
     }
 
     return source.subscribe(
       queueValue,
-      err => observer.error(err),
-      () => observer.complete()
+      err => observer.onError(err),
+      () => observer.onComplete()
     )
   })
 }
