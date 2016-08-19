@@ -20,10 +20,16 @@ import {Observable as O} from 'rx'
 export function rxRAFThrottle (source) {
   return O.create(observer => {
     let frame = null
+    let value
 
-    function queueValue (value) {
-      if (frame) raf.cancel(frame)
-      frame = raf(() => observer.onNext(value))
+    function dispatch () {
+      observer.onNext(value)
+      frame = null
+    }
+
+    function queueValue (_value) {
+      value = _value
+      if (!frame) frame = raf(dispatch)
     }
 
     return source.subscribe(
