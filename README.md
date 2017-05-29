@@ -1,4 +1,6 @@
 # rx-raf-throttle
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/tusharmath/rx-raf-throttle.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/tusharmath/rx-raf-throttle.svg?branch=master)](https://travis-ci.org/tusharmath/rx-raf-throttle)
 [![npm](https://img.shields.io/npm/v/rx-raf-throttle.svg)](https://www.npmjs.com/package/rx-raf-throttle)
 [![Coverage Status](https://coveralls.io/repos/github/tusharmath/rx-raf-throttle/badge.svg)](https://coveralls.io/github/tusharmath/rx-raf-throttle)
